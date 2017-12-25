@@ -18,22 +18,17 @@ change the program so that it works for any size, outputting a grid of the given
 */
 
 // Your code here.
-var size = 4;
-var s = ' ', h = '#';
-var result=''
-
+var size = 8, result, h= '#', s= ' ';
 for(i=1; i<=size; i++){
-  if(i%2 ==0){
-    for(j=1; j<=size/2; j++){
-      result += h + s;
-    }
-  }else{
-  	for(j=1; j<=size/2; j++){
-      result += s + h;
+  result = '';
+  for(j=1; j<size/2; j++){
+    if(i%2 ==0){
+      result += h+s;
+    }else{
+      result += s+h;
     }
   }
   console.log(result);
-  result = '';
 }
 
 // Book Solution:
